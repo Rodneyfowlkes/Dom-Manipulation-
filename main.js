@@ -16,11 +16,15 @@ var square_button = document.querySelector("#square-button");
 
 var equal_button = document.querySelector("#equal-button");
 
+
+
+
+
 // Add Function
 
 var add = function ( x, y) {
 
-var sum = Number(x) + Number(y) 
+var sum = eval(x + "+" + y) 
 
 return sum;
 
@@ -173,8 +177,8 @@ equal_button.addEventListener('click', function(event)
 
     var answer = document.querySelector("#value-one");
     var second_num2 = first_num.value;
-    first_num1 = first_num.value;
-    
+    // first_num1 = first_num.value;
+
     if (calprocess == 1) {
     	answer.value = add (first_num1, second_num2);
     } else if (calprocess == 2) {
@@ -205,7 +209,8 @@ var seven_button = document.querySelector("#seven-button");
 var ten_button = document.querySelector("#ten-button");
 var nine_button = document.querySelector("#nine-button");
 var clear_button = document.querySelector("#clear-button");
-
+var zero_button = document.querySelector("#zero-button");
+var decimal_button = document.querySelector("#decimal-button");
 
 one_button.addEventListener('click', function(event)
 {	event.preventDefault();
@@ -258,5 +263,12 @@ clear_button.addEventListener('click', function(event)
     num_inputs.value = " ";
 });
 
+zero_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(zero_button.textContent);
+});
 
-
+decimal_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = (num_inputs.value + (decimal_button.textContent));
+});

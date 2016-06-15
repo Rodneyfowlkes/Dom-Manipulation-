@@ -4,8 +4,16 @@
    height: 67px;
 
 }
+.ExtendedNumButt {
+	width: 120px;
+   height: 67px;
+}
 
 table {
 	height: 0px;
 	border-spacing: 0px;
+}
+
+.window {
+	
 }
