@@ -14,6 +14,7 @@ var divide_button = document.querySelector("#divide-button");
 
 var square_button = document.querySelector("#square-button");
 
+var equal_button = document.querySelector("#equal-button");
 
 // Add Function
 
@@ -72,7 +73,7 @@ return squareroot;
 
 
 
-
+calprocess = 
 
 
 
@@ -87,11 +88,10 @@ add_button.addEventListener('click', function(event)
 {
 	event.preventDefault();
 
-    var answer = document.querySelector("#answer");
-    var first_num1 = first_num.value;
-    var second_num2 = second_num.value;
-    answer.textContent = add (first_num1, second_num2);
-
+    var clear = document.querySelector("#value-one");
+    first_num1 = first_num.value;
+    clear.value = " ";
+    calprocess = 1;
 
 
 });
@@ -104,11 +104,10 @@ multiply_button.addEventListener('click', function(event)
 {
 	event.preventDefault();
 
-    var answer = document.querySelector("#answer");
-    var first_num1 = first_num.value;
-    var second_num2 = second_num.value;
-    answer.textContent = multiply (first_num1, second_num2);
-
+    var clear = document.querySelector("#value-one");
+    first_num1 = first_num.value;
+    clear.value = " ";
+    calprocess = 2;
 
 
 });
@@ -121,14 +120,14 @@ divide_button.addEventListener('click', function(event)
 {
 	event.preventDefault();
 
-    var answer = document.querySelector("#answer");
-    var first_num1 = first_num.value;
-    var second_num2 = second_num.value;
-    answer.textContent = divide (first_num1, second_num2);
-
+    var clear = document.querySelector("#value-one");
+    first_num1 = first_num.value;
+    clear.value = " ";
+    calprocess = 3;
 
 
 });
+
 
 
 // Subtract button
@@ -138,14 +137,14 @@ subtract_button.addEventListener('click', function(event)
 {
 	event.preventDefault();
 
-    var answer = document.querySelector("#answer");
-    var first_num1 = first_num.value;
-    var second_num2 = second_num.value;
-    answer.textContent = subtract (first_num1, second_num2);
-
+    var clear = document.querySelector("#value-one");
+    first_num1 = first_num.value;
+    clear.value = " ";
+    calprocess = 4;
 
 
 });
+
 
 
 // Square button
@@ -155,15 +154,40 @@ square_button.addEventListener('click', function(event)
 {
 	event.preventDefault();
 
-    var answer = document.querySelector("#answer");
-    var first_num1 = first_num.value;
-    var second_num2 = second_num.value;
-    answer.textContent = square (first_num1, second_num2);
-
+    var clear = document.querySelector("#value-one");
+    first_num1 = first_num.value;
+    clear.value = " ";
+    calprocess = 5;
 
 
 });
 
+
+
+// Equal button
+
+equal_button.addEventListener('click', function(event)
+
+{
+	event.preventDefault();
+
+    var answer = document.querySelector("#value-one");
+    var second_num2 = first_num.value;
+
+    if (calprocess == 6) {
+    	answer.value = add (first_num1, second_num2);
+    } else if (calprocess == 2) {
+    	answer.value = multiply (first_num1, second_num2);
+    } else if (calprocess ==3) {
+    	answer.value = divide (first_num1, second_num2);
+    } else if (calprocess == 4) {
+    	answer.value = subtract (first_num1, second_num2);
+    } else if (calprocess == 5) {
+    	answer.value = square (first_num1, second_num2);
+    }     
+    
+
+});
 
 
 
