@@ -154,9 +154,9 @@ square_button.addEventListener('click', function(event)
 {
 	event.preventDefault();
 
-    var clear = document.querySelector("#value-one");
+ 
     first_num1 = first_num.value;
-    clear.value = " ";
+    
     calprocess = 5;
 
 
@@ -173,8 +173,9 @@ equal_button.addEventListener('click', function(event)
 
     var answer = document.querySelector("#value-one");
     var second_num2 = first_num.value;
-
-    if (calprocess == 6) {
+    first_num1 = first_num.value;
+    
+    if (calprocess == 1) {
     	answer.value = add (first_num1, second_num2);
     } else if (calprocess == 2) {
     	answer.value = multiply (first_num1, second_num2);
@@ -183,12 +184,79 @@ equal_button.addEventListener('click', function(event)
     } else if (calprocess == 4) {
     	answer.value = subtract (first_num1, second_num2);
     } else if (calprocess == 5) {
-    	answer.value = square (first_num1, second_num2);
+    	answer.value = square (first_num1);
     }     
     
 
 });
 
+// Number button functions 
+
+
+var num_inputs = document.querySelector("#value-one");
+
+var one_button = document.querySelector("#one-button");
+var two_button = document.querySelector("#two-button");
+var three_button = document.querySelector("#three-button");
+var four_button = document.querySelector("#four-button");
+var five_button = document.querySelector("#five-button");
+var six_button = document.querySelector("#six-button");
+var seven_button = document.querySelector("#seven-button");
+var ten_button = document.querySelector("#ten-button");
+var nine_button = document.querySelector("#nine-button");
+var clear_button = document.querySelector("#clear-button");
+
+
+one_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(one_button.textContent);
+});
+
+
+two_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(two_button.textContent);
+});
+
+three_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(three_button.textContent);
+});
+
+four_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(four_button.textContent);
+});
+
+five_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(five_button.textContent);
+});
+
+six_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(six_button.textContent);
+});
+
+seven_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(seven_button.textContent);
+});
+
+ ten_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(ten_button.textContent);
+});
+
+nine_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = num_inputs.value + Number(nine_button.textContent);
+});
+
+clear_button.addEventListener('click', function(event)
+{	event.preventDefault();
+    num_inputs.value = " ";
+});
 
 
 
