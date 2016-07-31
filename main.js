@@ -176,19 +176,25 @@ equal_button.addEventListener('click', function(event)
 	event.preventDefault();
 
     var answer = document.querySelector("#value-one");
+    var answer2 = document.querySelector("#answer");
     var second_num2 = first_num.value;
     // first_num1 = first_num.value;
 
     if (calprocess == 1) {
-    	answer.value = add (first_num1, second_num2);
+    	answer2.innerHTML = add (first_num1, second_num2);
+        answer.value = add (first_num1, second_num2);
     } else if (calprocess == 2) {
     	answer.value = multiply (first_num1, second_num2);
+        answer2.innerHTML = multiply (first_num1, second_num2);                                      
     } else if (calprocess ==3) {
     	answer.value = divide (first_num1, second_num2);
+        answer2.innerHTML = divide (first_num1, second_num2);
     } else if (calprocess == 4) {
     	answer.value = subtract (first_num1, second_num2);
+        answer2.innerHTML = subtract (first_num1, second_num2);
     } else if (calprocess == 5) {
     	answer.value = square (first_num1);
+        answer2.innerHTML = square (first_num1);
     }     
     
 
